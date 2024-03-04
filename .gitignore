@@ -1,0 +1,54 @@
+# Specifies intentionally untracked files to ignore when using Git for Unity development.
+# See http://git.io/jkfum for more information.
+
+# Unity generated files
+[Tt]emp/
+[Oo]bj/
+[Bb]uild
+[Ll]ibrary/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+
+# Visual Studio / MonoDevelop generated files
+[Ee]xported[Oo]bj/
+.vs/
+/*.suo
+/*.user
+/*.userprefs
+/*.pidb
+/*.booproj
+/*.sln*
+/*.csproj
+/*.unityproj
+/*.pdb
+/*.mdb
+
+# Unity3D generated meta files
+*.pidb.meta
+
+# Unity3D Generated File On Crash Reports
+sysinfo.txt
+
+# macOS
+.DS_Store
+
+# Thumbnails
+._*
+
+# Windows
+Thumbs.db
+
+# Linux
+*.sln.iml
+
+# Rider
+.idea/
+*.sln.DotSettings
+
+# FMOD generated files
+/Assets/FMODStudioCache/
+/Assets/Plugins/FMODStudioCache/
+/Library/FMOD/
+
+# Custom ignore rules
+# Add custom ignore rules here
