@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpeciesSpawner : MonoBehaviour
+public class SpawnController : MonoBehaviour
 {
     // [SerializeField] private Species speciesToSpawn;
     [SerializeField] private float spawnRegionWidth;
