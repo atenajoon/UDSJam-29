@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd19a137c22624c2e8cb7096d3c73185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRegionWidth: 10
+  spawnRegionWidth: 7
   speciesPrefabs:
   - {fileID: 1579167445186968277, guid: c9a3ed136d7eb41a28b19b95accecadc, type: 3}
   - {fileID: 9221571030897009484, guid: b1e70635aea094ad2b300d50db47cd00, type: 3}

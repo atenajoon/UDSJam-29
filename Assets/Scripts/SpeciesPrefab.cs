@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpeciesPrefab : MonoBehaviour
 {
-    public int speciesWeight;
+    public float speciesWeight;
     void OnBecameInvisible()
     {
         Destroy(gameObject); // destroy the bullet out of the scene
