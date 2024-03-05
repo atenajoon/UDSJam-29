@@ -9,8 +9,8 @@ public class SpawnController : MonoBehaviour
     public GameObject[] speciesPrefabs;
     public float minSpawnDelay = 1f;
     public float maxSpawnDelay = 3f;
-
     private float nextSpawnTime;
+    private Dictionary<GameObject, int> speciesCount = new Dictionary<GameObject, int>();
 
     void Start()
     {
@@ -33,9 +33,23 @@ public class SpawnController : MonoBehaviour
     {
         int randomIndex = Random.Range(0, speciesPrefabs.Length);
         GameObject selectedSpeciesPrefab = speciesPrefabs[randomIndex];
+        
+        if (!speciesCount.ContainsKey(selectedSpeciesPrefab) || speciesCount[selectedSpeciesPrefab] < 7)
+        {
+            Instantiate(selectedSpeciesPrefab, GetRandomPosition(), Quaternion.identity);
 
-        Instantiate(selectedSpeciesPrefab, GetRandomPosition(), Quaternion.identity);
-        Debug.Log("Spawning");
+            if(!speciesCount.ContainsKey(selectedSpeciesPrefab))
+            {
+                speciesCount[selectedSpeciesPrefab] = 1;
+            }
+            else
+            {
+                speciesCount[selectedSpeciesPrefab]++ ;
+            }
+            Debug.Log("Spawning " + selectedSpeciesPrefab.name + " (" + speciesCount[selectedSpeciesPrefab] + "/7)");
+        }
+
+       
     }
 
     private Vector3 GetRandomPosition()
