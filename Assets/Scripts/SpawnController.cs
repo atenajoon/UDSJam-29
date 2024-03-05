@@ -6,7 +6,7 @@ public class SpawnController : MonoBehaviour
 {
     // [SerializeField] private Species speciesToSpawn;
     [SerializeField] private float spawnRegionWidth;
-    public GameObject speciesPrefab;
+    public GameObject[] speciesPrefabs;
     public float minSpawnDelay = 1f;
     public float maxSpawnDelay = 3f;
 
@@ -31,7 +31,10 @@ public class SpawnController : MonoBehaviour
 
     void SpawnSpecies()
     {
-        Instantiate(speciesPrefab, GetRandomPosition(), Quaternion.identity);
+        int randomIndex = Random.Range(0, speciesPrefabs.Length);
+        GameObject selectedSpeciesPrefab = speciesPrefabs[randomIndex];
+
+        Instantiate(selectedSpeciesPrefab, GetRandomPosition(), Quaternion.identity);
         Debug.Log("Spawning");
     }
 
