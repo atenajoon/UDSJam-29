@@ -34,37 +34,32 @@ public class SpawnController : MonoBehaviour
         int randomIndex = Random.Range(0, speciesPrefabs.Length);
         GameObject selectedSpeciesPrefab = speciesPrefabs[randomIndex];
         
-        if (!speciesCount.ContainsKey(selectedSpeciesPrefab) || speciesCount[selectedSpeciesPrefab] < 7)
+        GameObject _newSpecies = Instantiate(selectedSpeciesPrefab, GetRandomPosition(), Quaternion.identity);
+
+        // Adjust falling speed based on the weight of the species
+        SpeciesPrefab speciesScript = _newSpecies.GetComponent<SpeciesPrefab>();
+        if (speciesScript != null)
         {
-            GameObject _newSpecies = Instantiate(selectedSpeciesPrefab, GetRandomPosition(), Quaternion.identity);
-
-            // Adjust falling speed based on the weight of the species
-            SpeciesPrefab speciesScript = _newSpecies.GetComponent<SpeciesPrefab>();
-            if (speciesScript != null)
+            float weight = speciesScript.speciesWeight;
+            // Adjust falling speed based on weight (for example, adjust Rigidbody2D gravity scale)
+            Rigidbody2D rb = _newSpecies.GetComponent<Rigidbody2D>();
+            if (rb != null)
             {
-                float weight = speciesScript.speciesWeight;
-                // Adjust falling speed based on weight (for example, adjust Rigidbody2D gravity scale)
-                Rigidbody2D rb = _newSpecies.GetComponent<Rigidbody2D>();
-                if (rb != null)
-                {
-                    // Adjust gravity scale based on weight
-                    // You might need to adjust this value based on your game's physics settings
-                    rb.gravityScale = 1f + weight * 0.5f;
-                }
+                // Adjust gravity scale based on weight
+                // You might need to adjust this value based on your game's physics settings
+                rb.gravityScale = 1f + weight * 0.5f;
             }
-
-            if(!speciesCount.ContainsKey(selectedSpeciesPrefab))
-            {
-                speciesCount[selectedSpeciesPrefab] = 1;
-            }
-            else
-            {
-                speciesCount[selectedSpeciesPrefab]++ ;
-            }
-            Debug.Log("Spawning " + selectedSpeciesPrefab.name + " (" + speciesCount[selectedSpeciesPrefab] + "/7)");
         }
 
-       
+        if(!speciesCount.ContainsKey(selectedSpeciesPrefab))
+        {
+            speciesCount[selectedSpeciesPrefab] = 1;
+        }
+        else
+        {
+            speciesCount[selectedSpeciesPrefab]++ ;
+        }
+        Debug.Log("Spawning " + selectedSpeciesPrefab.name + ": " + speciesCount[selectedSpeciesPrefab]);      
     }
 
     private Vector3 GetRandomPosition()
