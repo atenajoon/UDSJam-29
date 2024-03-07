@@ -9,6 +9,7 @@ TagManager:
   - Rabbit
   - Useless
   - Box
+  - Ground
   layers:
   - Default
   - TransparentFX
