@@ -5,6 +5,14 @@ using UnityEngine;
 public class SpeciesPrefab : MonoBehaviour
 {
     public float speciesWeight;
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Ground"))
+        {
+            Destroy(gameObject);
+        }
+    }
     void OnBecameInvisible()
     {
         Destroy(gameObject); // destroy the bullet out of the scene
