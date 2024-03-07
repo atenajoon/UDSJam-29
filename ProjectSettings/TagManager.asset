@@ -7,9 +7,10 @@ TagManager:
   - Fish
   - Bear
   - Rabbit
-  - Useless
   - Box
   - Ground
+  - Null
+  - Background
   layers:
   - Default
   - TransparentFX
