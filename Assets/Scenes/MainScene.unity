@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9c3a618cc74e404787460e507d7b613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
+  moveSpeed: 14
 --- !u!50 &295242600
 Rigidbody2D:
   serializedVersion: 4
@@ -435,7 +435,7 @@ MonoBehaviour:
   - {fileID: 9221571030897009484, guid: b1e70635aea094ad2b300d50db47cd00, type: 3}
   - {fileID: 4841222685671779378, guid: 72b585df77d5843809c9dbc5214b52e1, type: 3}
   minSpawnDelay: 0
-  maxSpawnDelay: 1
+  maxSpawnDelay: 2
 --- !u!4 &829225579
 Transform:
   m_ObjectHideFlags: 0
