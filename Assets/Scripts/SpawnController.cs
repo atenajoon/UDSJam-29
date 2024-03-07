@@ -59,7 +59,7 @@ public class SpawnController : MonoBehaviour
         {
             speciesCount[selectedSpeciesPrefab]++ ;
         }
-        Debug.Log("Spawning " + selectedSpeciesPrefab.name + ": " + speciesCount[selectedSpeciesPrefab]);      
+        // Debug.Log("Spawning " + selectedSpeciesPrefab.name + ": " + speciesCount[selectedSpeciesPrefab]);      
     }
 
     private Vector3 GetRandomPosition()
