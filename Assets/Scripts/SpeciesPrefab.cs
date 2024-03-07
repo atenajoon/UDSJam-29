@@ -12,9 +12,25 @@ public class SpeciesPrefab : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        else 
+        {
+            string collidedTag = collision.gameObject.tag;
+            //  if the 2 collided species are the same
+            if(gameObject.CompareTag(collidedTag))
+            {
+                // combine them to evolve
+                Debug.Log("collidedTag: " + collidedTag);
+                //  explode the other ones
+            }
+               
+        }
+
+
     }
     void OnBecameInvisible()
     {
         Destroy(gameObject); // destroy the bullet out of the scene
     }
+
+
 }

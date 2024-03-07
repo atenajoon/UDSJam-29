@@ -5,7 +5,7 @@ using UnityEngine;
 public class Box : MonoBehaviour
 {
 
-   void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("bear hit BOX");
     }
