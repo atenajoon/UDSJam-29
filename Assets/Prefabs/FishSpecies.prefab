@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 6076178513926868905}
   - component: {fileID: 2123088502093382807}
   - component: {fileID: 4219455305502097729}
-  - component: {fileID: 1010186704110715039}
   - component: {fileID: 5311515548104083009}
+  - component: {fileID: 986317053514978295}
   m_Layer: 0
   m_Name: FishSpecies
   m_TagString: Fish
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1579167445186968277}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.557954, y: 0.28893194, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalScale: {x: 0.42430001, y: 0.42430001, z: 0.42430001}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -76,8 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 0.14978641, g: 0.9622642, b: 0.9471271, a: 1}
+  m_Sprite: {fileID: -572967992, guid: e056e607e643be2468c1cdb8ba505271, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -108,8 +108,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &1010186704110715039
-BoxCollider2D:
+--- !u!114 &5311515548104083009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579167445186968277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fb7bfee0431d456fb0024c2d28e7f45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speciesWeight: 0.7
+--- !u!60 &986317053514978295
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -125,25 +138,29 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 2}
+    oldSize: {x: 2.5415213, y: 3.2}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 2}
-  m_EdgeRadius: 0
---- !u!114 &5311515548104083009
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1579167445186968277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fb7bfee0431d456fb0024c2d28e7f45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speciesWeight: 0.7
+  m_Points:
+    m_Paths:
+    - - {x: 1.2820956, y: 0.33569744}
+      - {x: 1.0182657, y: 1.0978724}
+      - {x: 0.78375036, y: 1.3323878}
+      - {x: 0.37334847, y: 1.625532}
+      - {x: 0.021575416, y: 1.625532}
+      - {x: -0.3008832, y: 1.5962175}
+      - {x: -0.50608414, y: 1.4789599}
+      - {x: -0.9751149, y: 0.95130026}
+      - {x: -1.1803159, y: 0.306383}
+      - {x: -1.2389446, y: 0.07186766}
+      - {x: -1.2389446, y: -0.8955082}
+      - {x: -1.0923725, y: -1.1886524}
+      - {x: -0.3888265, y: -1.5990543}
+      - {x: 0.4319773, y: -1.5990543}
+      - {x: 0.5199206, y: -1.5697399}
+      - {x: 0.75443596, y: -1.4524822}
+      - {x: 1.2527812, y: -0.9834515}
+      - {x: 1.2820956, y: -0.807565}
