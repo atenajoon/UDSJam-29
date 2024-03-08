@@ -4,28 +4,27 @@ using UnityEngine;
 
 public class EvolvedSpecies : MonoBehaviour
 {
+    // List to store collided objects
+    private List<GameObject> collidedObjects = new List<GameObject>();
+
     void OnCollisionEnter2D(Collision2D collision)
     {
+        
         string speciesTag = collision.gameObject.tag;
         string collidedObjectTag = gameObject.tag;
 
-        switch (speciesTag)
+        // if 2 similar items collide
+        if (speciesTag == collidedObjectTag)
         {
-            case "BearEgg" when collidedObjectTag == "Bear":
-                // Destroy(gameObject);
-                Destroy(collision.gameObject);
-                break;
+            Debug.Log("similar");
+            collidedObjects.Add(collision.gameObject);
+            Destroy(gameObject);
+        }
 
-            case "FishEgg" when collidedObjectTag == "Fish":
-                // Destroy(other.gameObject);
-                // EvolveFish(position, rotation);
-                break;
-            case "RabbitEgg" when collidedObjectTag == "Rabbit":
-                // Destroy(other.gameObject);
-                // EvolveRabbit(position, rotation);
-                break;
-            default:
-                break;                                                              
+        // Example: Print the names of collided objects in the list
+        foreach (GameObject obj in collidedObjects)
+        {
+            Debug.Log("Collided Object: " + obj.name);
         }
     }
 }
