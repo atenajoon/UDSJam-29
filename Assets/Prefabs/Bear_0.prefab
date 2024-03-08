@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 4345349170678466667}
   - component: {fileID: 7028850305049136941}
   - component: {fileID: -5663588786010831149}
-  - component: {fileID: -3992342433923829768}
   - component: {fileID: -3567233417430277399}
+  - component: {fileID: 3269806355278511068}
   m_Layer: 0
   m_Name: Bear_0
   m_TagString: Bear
@@ -108,19 +108,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-3992342433923829768
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 199731320634957301}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fb7bfee0431d456fb0024c2d28e7f45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speciesWeight: 1.5
 --- !u!70 &-3567233417430277399
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -137,3 +124,16 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 5, y: 5.83}
   m_Direction: 0
+--- !u!114 &3269806355278511068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199731320634957301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fb7bfee0431d456fb0024c2d28e7f45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speciesWeight: 1

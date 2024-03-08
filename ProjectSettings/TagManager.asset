@@ -11,6 +11,8 @@ TagManager:
   - Ground
   - Null
   - Background
+  - BearEgg
+  - EvolvePoint
   layers:
   - Default
   - TransparentFX
