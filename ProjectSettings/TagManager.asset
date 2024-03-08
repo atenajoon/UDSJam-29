@@ -13,6 +13,8 @@ TagManager:
   - Background
   - BearEgg
   - EvolvePoint
+  - FishEgg
+  - RabbitEgg
   layers:
   - Default
   - TransparentFX
