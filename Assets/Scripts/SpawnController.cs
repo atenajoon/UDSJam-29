@@ -7,8 +7,8 @@ public class SpawnController : MonoBehaviour
     // [SerializeField] private Species speciesToSpawn;
     [SerializeField] private float spawnRegionWidth;
     public GameObject[] speciesPrefabs;
-    public float minSpawnDelay = 1f;
-    public float maxSpawnDelay = 3f;
+    public float minSpawnDelay;
+    public float maxSpawnDelay;
     private float nextSpawnTime;
     private Dictionary<GameObject, int> speciesCount = new Dictionary<GameObject, int>();
 
