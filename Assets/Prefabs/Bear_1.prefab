@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1373318764130143773}
   m_Layer: 0
   m_Name: Bear_1
-  m_TagString: Bear
+  m_TagString: Bear_1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
