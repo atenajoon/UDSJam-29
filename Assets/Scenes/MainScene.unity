@@ -490,7 +490,7 @@ MonoBehaviour:
   - {fileID: 4420812692814503624, guid: 7062fcf3d03bd458186705812e6ae079, type: 3}
   - {fileID: 3642599197480288374, guid: df8ecb7f389224775b41f6cbc75d9189, type: 3}
   minSpawnDelay: 0
-  maxSpawnDelay: 1
+  maxSpawnDelay: 0.75
 --- !u!4 &829225579
 Transform:
   m_ObjectHideFlags: 0
