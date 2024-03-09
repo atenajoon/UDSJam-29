@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         OnMove();
-        KeepPlayerInCamera();
+        // KeepPlayerInCamera();
     }
     private void OnMove()
     {
@@ -32,28 +32,28 @@ public class PlayerController : MonoBehaviour
 
         // }
     }
-    private void KeepPlayerInCamera()
-    {
-        // Get the player character's position
-        Vector3 playerPosition = transform.position;
+    // private void KeepPlayerInCamera()
+    // {
+    //     // Get the player character's position
+    //     Vector3 playerPosition = transform.position;
 
-        // Get the camera's bounds in world space
-        Vector3 cameraMin = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 0)); // the bottom-left of the camera
-        Vector3 cameraMax = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, 0)); // top-right
+    //     // Get the camera's bounds in world space
+    //     Vector3 cameraMin = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 0)); // the bottom-left of the camera
+    //     Vector3 cameraMax = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, 0)); // top-right
 
-        // Check if the player is outside the camera's bounds
-        if (playerPosition.x < cameraMin.x)
-        {
-            playerPosition.x = cameraMin.x;
-        }
-        else if (playerPosition.x > cameraMax.x)
-        {
-            playerPosition.x = cameraMax.x;
-        }
+    //     // Check if the player is outside the camera's bounds
+    //     if (playerPosition.x < cameraMin.x)
+    //     {
+    //         playerPosition.x = cameraMin.x;
+    //     }
+    //     else if (playerPosition.x > cameraMax.x)
+    //     {
+    //         playerPosition.x = cameraMax.x;
+    //     }
 
-        // Update the player character's position
-        transform.position = playerPosition;
-    }
+    //     // Update the player character's position
+    //     transform.position = playerPosition;
+    // }
     private void OnEnable()
     {
         playerActionControls.Enable();

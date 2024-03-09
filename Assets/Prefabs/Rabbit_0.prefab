@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 6321271924509889689}
   - component: {fileID: -4305416910778354681}
   - component: {fileID: 4178460343967031769}
+  - component: {fileID: -7347809627451031485}
   m_Layer: 0
   m_Name: Rabbit_0
-  m_TagString: Rabbit
+  m_TagString: RabbitEgg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,4 +137,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fb7bfee0431d456fb0024c2d28e7f45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speciesWeight: 0
+  speciesWeight: 0.5
+--- !u!114 &-7347809627451031485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3642599197480288374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf595337f32d3426ab79c9d3271a895f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
