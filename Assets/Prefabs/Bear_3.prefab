@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3451357901511192114}
   - component: {fileID: 3920949462738655236}
   - component: {fileID: 2797055616007305173}
-  - component: {fileID: -1026042943389171874}
   m_Layer: 0
   m_Name: Bear_3
   m_TagString: Bear_3
@@ -122,6 +121,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speciesWeight: 3
+  speciesLevel: 3
+  speciesType: Bear
+  evolutionPrefabs:
+  - {fileID: 199731320634957301, guid: f934e3a6d88b741528c996061cc500a7, type: 3}
+  - {fileID: 2396304582041632068, guid: f3c2d5672887b4769a6baeb32cc34ba0, type: 3}
+  - {fileID: 732261567862650283, guid: abca3a5b527164c8cad8f19b746d2db5, type: 3}
+  - {fileID: 1617474634021622475}
 --- !u!70 &2797055616007305173
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -138,15 +144,3 @@ CapsuleCollider2D:
   m_Offset: {x: -0.03231764, y: -0.29086387}
   m_Size: {x: 5.9646354, y: 8.57391}
   m_Direction: 0
---- !u!114 &-1026042943389171874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1617474634021622475}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf595337f32d3426ab79c9d3271a895f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

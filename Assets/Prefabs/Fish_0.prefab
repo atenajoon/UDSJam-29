@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3069028974257712900}
   - component: {fileID: 7989536874054411791}
   - component: {fileID: 2868251008594963022}
-  - component: {fileID: -1330818202086464062}
   m_Layer: 0
   m_Name: Fish_0
   m_TagString: FishEgg
@@ -138,15 +137,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speciesWeight: -0.75
---- !u!114 &-1330818202086464062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4420812692814503624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf595337f32d3426ab79c9d3271a895f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  speciesLevel: 0
+  speciesType: Fish
+  evolutionPrefabs:
+  - {fileID: 4420812692814503624}
+  - {fileID: 4543762334405108496, guid: 314c00c912bc442ec8119d446105f8df, type: 3}
+  - {fileID: 4661484643493502843, guid: ca8bdbaf762af4e0586cdab84ddd002b, type: 3}
+  - {fileID: 5189212160027560808, guid: 174a0ad93b3114d6385cfa6a4d7f9b30, type: 3}
