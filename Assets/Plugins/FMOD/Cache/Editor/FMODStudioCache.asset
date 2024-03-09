@@ -42,11 +42,65 @@ MonoBehaviour:
   Path: GameAudio/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638453241958430929
+  lastModified: 638455769550574393
   FileSizes:
   - Name: Desktop
-    Value: 2476096
+    Value: 4091808
   Exists: 1
+--- !u!114 &-3216586892927177724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/MenuMusic
+  m_EditorClassIdentifier: 
+  Path: event:/Music/MenuMusic
+  Guid:
+    Data1: 770641835
+    Data2: 1079455602
+    Data3: 1897591173
+    Data4: 1189116563
+  Banks:
+  - {fileID: -7696767715852318650}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 14773
+--- !u!114 &-3142165175552994722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/PauseMusic
+  m_EditorClassIdentifier: 
+  Path: event:/Music/PauseMusic
+  Guid:
+    Data1: -808049491
+    Data2: 1113331860
+    Data3: 244056237
+    Data4: -185597759
+  Banks:
+  - {fileID: -7696767715852318650}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 14788
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,13 +118,43 @@ MonoBehaviour:
   - {fileID: -7696767715852318650}
   EditorEvents:
   - {fileID: -7934250531100578144}
+  - {fileID: 361033081391503182}
+  - {fileID: -3216586892927177724}
+  - {fileID: -3142165175552994722}
   EditorParameters: []
   MasterBanks:
   - {fileID: -7696767715852318650}
   StringsBanks:
   - {fileID: 8719878588483099504}
-  cacheTime: 638453241958450867
+  cacheTime: 638455769550604349
   cacheVersion: 131609
+--- !u!114 &361033081391503182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/GameMusic
+  m_EditorClassIdentifier: 
+  Path: event:/Music/GameMusic
+  Guid:
+    Data1: 1982845525
+    Data2: 1148168876
+    Data3: -992769352
+    Data4: 1261752374
+  Banks:
+  - {fileID: -7696767715852318650}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 88607
 --- !u!114 &8719878588483099504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,8 +170,8 @@ MonoBehaviour:
   Path: GameAudio/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638453241958450867
+  lastModified: 638455769550604349
   FileSizes:
   - Name: Desktop
-    Value: 754
+    Value: 904
   Exists: 1
