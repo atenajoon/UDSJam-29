@@ -159,7 +159,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 201.79999, y: 827.7}
-  m_SizeDelta: {x: 1028.2, y: 390}
+  m_SizeDelta: {x: 1028.2, y: 429.24}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &275241922
 MonoBehaviour:
@@ -598,6 +598,9 @@ MonoBehaviour:
     & Unity Programmer
 
     Atena Razm - Gameplay Programmer
+
+    Nicholas Bondar
+    - Sound Designer
 
 
 
