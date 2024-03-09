@@ -483,6 +483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 703c01229f62d4405b5ef5920e7bb431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxCapacity: 10
 --- !u!1 &7369089188820269033
 GameObject:
   m_ObjectHideFlags: 0
@@ -493,7 +494,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7369089188820269038}
   - component: {fileID: 5110510016448574802}
-  - component: {fileID: 7721116196572967762}
   - component: {fileID: 5006743126269497192}
   m_Layer: 0
   m_Name: Box
@@ -574,30 +574,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7721116196572967762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7369089188820269033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c9f216cfd25343779f6bdf99d8d1f0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bearPrefabs:
-  - {fileID: 2396304582041632068, guid: f3c2d5672887b4769a6baeb32cc34ba0, type: 3}
-  - {fileID: 732261567862650283, guid: abca3a5b527164c8cad8f19b746d2db5, type: 3}
-  - {fileID: 1617474634021622475, guid: 6da563b0c41ee4c0f8058b56ceffbdc7, type: 3}
-  fishPrefabs:
-  - {fileID: 4543762334405108496, guid: 314c00c912bc442ec8119d446105f8df, type: 3}
-  - {fileID: 4661484643493502843, guid: ca8bdbaf762af4e0586cdab84ddd002b, type: 3}
-  - {fileID: 5189212160027560808, guid: 174a0ad93b3114d6385cfa6a4d7f9b30, type: 3}
-  rabbitPrefabs:
-  - {fileID: 1142877862740067495, guid: 8328f69b052b6490aa7198134cd469cc, type: 3}
-  - {fileID: 4713437332822106866, guid: 205d1707f07e64b2e9aec26a4358cdb1, type: 3}
-  - {fileID: 267583077754899081, guid: 9a7f458e84c8b423cac42dd0c13aa021, type: 3}
 --- !u!61 &5006743126269497192
 BoxCollider2D:
   m_ObjectHideFlags: 0

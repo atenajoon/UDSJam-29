@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 7845964970715581756}
   - component: {fileID: 165860067494020690}
   - component: {fileID: 4235344679274138882}
-  - component: {fileID: -6149522250386739822}
   m_Layer: 0
   m_Name: Rabbit_3
   m_TagString: Rabbit_3
@@ -122,6 +121,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speciesWeight: 2.5
+  speciesLevel: 3
+  speciesType: Rabbit
+  evolutionPrefabs:
+  - {fileID: 3642599197480288374, guid: df8ecb7f389224775b41f6cbc75d9189, type: 3}
+  - {fileID: 1142877862740067495, guid: 8328f69b052b6490aa7198134cd469cc, type: 3}
+  - {fileID: 4713437332822106866, guid: 205d1707f07e64b2e9aec26a4358cdb1, type: 3}
+  - {fileID: 267583077754899081}
 --- !u!61 &4235344679274138882
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -148,15 +154,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10.31, y: 20.32}
   m_EdgeRadius: 0
---- !u!114 &-6149522250386739822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 267583077754899081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf595337f32d3426ab79c9d3271a895f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

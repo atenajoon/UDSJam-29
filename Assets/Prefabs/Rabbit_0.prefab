@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 6321271924509889689}
   - component: {fileID: -4305416910778354681}
   - component: {fileID: 4178460343967031769}
-  - component: {fileID: -7347809627451031485}
   m_Layer: 0
   m_Name: Rabbit_0
   m_TagString: RabbitEgg
@@ -138,15 +137,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speciesWeight: -0.75
---- !u!114 &-7347809627451031485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3642599197480288374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf595337f32d3426ab79c9d3271a895f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  speciesLevel: 0
+  speciesType: Rabbit
+  evolutionPrefabs:
+  - {fileID: 3642599197480288374}
+  - {fileID: 1142877862740067495, guid: 8328f69b052b6490aa7198134cd469cc, type: 3}
+  - {fileID: 4713437332822106866, guid: 205d1707f07e64b2e9aec26a4358cdb1, type: 3}
+  - {fileID: 267583077754899081, guid: 9a7f458e84c8b423cac42dd0c13aa021, type: 3}

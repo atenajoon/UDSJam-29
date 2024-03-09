@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 8404042192810306269}
   - component: {fileID: 1412503853754843080}
   - component: {fileID: 1373318764130143773}
-  - component: {fileID: -4065018022386727706}
   m_Layer: 0
   m_Name: Bear_1
   m_TagString: Bear_1
@@ -148,15 +147,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speciesWeight: 2
---- !u!114 &-4065018022386727706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2396304582041632068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf595337f32d3426ab79c9d3271a895f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  speciesLevel: 1
+  speciesType: Bear
+  evolutionPrefabs:
+  - {fileID: 199731320634957301, guid: f934e3a6d88b741528c996061cc500a7, type: 3}
+  - {fileID: 2396304582041632068}
+  - {fileID: 732261567862650283, guid: abca3a5b527164c8cad8f19b746d2db5, type: 3}
+  - {fileID: 1617474634021622475, guid: 6da563b0c41ee4c0f8058b56ceffbdc7, type: 3}

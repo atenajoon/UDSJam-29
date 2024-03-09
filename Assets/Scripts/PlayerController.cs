@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     }
     private void OnMove()
     {
-        Debug.Log("move");
+        // Debug.Log("move");
         //  if the box is not full yet
         // {
                 float _movementInput = playerActionControls.Land.Move.ReadValue<float>();
