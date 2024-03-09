@@ -5,12 +5,24 @@ TagManager:
   serializedVersion: 2
   tags:
   - Fish
-  - Bear
   - Rabbit
   - Box
   - Ground
   - Null
   - Background
+  - BearEgg
+  - EvolvePoint
+  - FishEgg
+  - RabbitEgg
+  - Bear_2
+  - Bear_1
+  - Bear_3
+  - Fish_1
+  - Fish_2
+  - Fish_3
+  - Rabbit_1
+  - Rabbit_2
+  - Rabbit_3
   layers:
   - Default
   - TransparentFX

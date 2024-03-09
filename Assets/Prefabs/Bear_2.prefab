@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 3901031579565464257}
   - component: {fileID: 960173535887712945}
   - component: {fileID: 5630034180320669654}
+  - component: {fileID: 3880998703210996722}
   m_Layer: 0
   m_Name: Bear_2
-  m_TagString: Bear
+  m_TagString: Bear_2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -303,3 +304,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speciesWeight: 2.5
+--- !u!114 &3880998703210996722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732261567862650283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf595337f32d3426ab79c9d3271a895f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
