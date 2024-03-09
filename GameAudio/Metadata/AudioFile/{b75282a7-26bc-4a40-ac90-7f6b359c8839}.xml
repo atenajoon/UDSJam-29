@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{b75282a7-26bc-4a40-ac90-7f6b359c8839}">
+		<property name="assetPath">
+			<value>Music/Credits or pause menu loop.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>14.788</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{c43ef3a9-69c4-4db7-a57d-9a8d972bd515}</destination>
+		</relationship>
+	</object>
+</objects>
