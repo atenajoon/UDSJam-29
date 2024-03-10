@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     {
         if (Instance == null) { Instance = this; }
         else { Destroy(gameObject); }
+        StopMenu.Instance.GameStart();
     }
 
     public void UpdateEvolutionLevel(string speciesType, int newLevel)
@@ -29,9 +30,12 @@ public class GameManager : MonoBehaviour
     {
         // Handle the win condition when a creature reaches level 3.
         Debug.Log($"Game Over! {speciesType} reached its highest evolution level.");
+
         // Store the species that won for display on the main menu.
         lastEvolvedSpecies = speciesType;
-        // Implement your win logic here.
+
+        // Call UI method to display the win popup
+        StopMenu.Instance.ShowWinPopup(speciesType);
     }
 
     public void TriggerGameOver()
@@ -39,8 +43,10 @@ public class GameManager : MonoBehaviour
         // Handle the game over condition when the box is full.
         Debug.Log("Game Over: The box is full!");
         // Implement your game over logic here.
+        // Call UI method to display the win popup
+        StopMenu.Instance.ShowLostPopup();
     }
-    
+
     // Additional method to get the last evolved species for the main menu.
     public string GetLastEvolvedSpecies()
     {

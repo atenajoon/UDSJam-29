@@ -30,6 +30,10 @@ public class SpeciesPrefab : MonoBehaviour
             Destroy(gameObject);
             // Make sure to also destroy the other creature that was involved in the evolution
             // You might need to pass it as a parameter or store a reference to it
+            if (speciesLevel + 1 == 3)
+            {
+                GameManager.Instance.TriggerWin(speciesType);
+            }
         }
         else
         {

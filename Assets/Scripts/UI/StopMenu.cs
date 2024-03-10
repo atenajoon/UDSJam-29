@@ -5,11 +5,19 @@ using UnityEngine.UIElements;
 
 public class StopMenu : MonoBehaviour
 {
+    public static StopMenu Instance { get; private set; }
+    private VisualElement winPopup;
+    private VisualElement lostPopup;
     private bool isPaused = false;
     private bool isMuted = false;
     private bool canClickQuit = false;
     private VisualElement stopMenu; // Make sure stopMenu is accessible throughout the class
 
+    private void Awake()
+    {
+        if (Instance == null) { Instance = this; }
+        else { Destroy(gameObject); }
+    }
     private void OnEnable()
     {
         VisualElement root = GetComponent<UIDocument>().rootVisualElement;
@@ -17,6 +25,8 @@ public class StopMenu : MonoBehaviour
         Button buttonResume = root.Q<Button>("buttonResume");
         Button buttonAudio = root.Q<Button>("buttonAudio");
         Button buttonQuit = root.Q<Button>("buttonQuit");
+        winPopup = root.Q<VisualElement>("WonPopup");
+        lostPopup = root.Q<VisualElement>("LostPopup");
 
         buttonResume.clicked += () =>
         {
@@ -51,6 +61,47 @@ public class StopMenu : MonoBehaviour
             }
         };
 
+    }
+
+    // Call this method to display the win popup
+    public void ShowWinPopup(string speciesType)
+    {
+        if (winPopup != null)
+        {
+            winPopup.style.display = DisplayStyle.Flex; // Or another way to make it visible depending on your UI setup
+
+            // Find the correct image to display based on speciesType
+            // Assuming you have images with the IDs "BearWin", "FishWin", "RabbitWin"
+            string imageId = speciesType + "Win"; // e.g., "BearWin"
+            VisualElement speciesImage = winPopup.Q<VisualElement>(imageId);
+            if (speciesImage != null)
+            {
+                speciesImage.style.display = DisplayStyle.Flex; // Show the correct image
+            }
+            Button goMainMenu = winPopup.Q<Button>("buttonMainMenu");
+            goMainMenu.clicked += () =>
+            {
+                Debug.Log("quit clicked");
+                SceneManager.LoadScene("MenuScene");
+            };
+            GameEnd();
+            // Optionally, hide other images if they are not already hidden by default
+        }
+    }
+    // Call this method to display the win popup
+    public void ShowLostPopup()
+    {
+        if (lostPopup != null)
+        {
+            lostPopup.style.display = DisplayStyle.Flex; // Or another way to make it visible depending on your UI setup
+            Button goMainMenu = lostPopup.Q<Button>("buttonMainMenu");
+            goMainMenu.clicked += () =>
+            {
+                Debug.Log("quit clicked");
+                SceneManager.LoadScene("MenuScene");
+            };
+            GameEnd();
+        }
     }
     private void ToggleMute()
     {
@@ -118,7 +169,10 @@ public class StopMenu : MonoBehaviour
     void GameEnd()
     {
         Time.timeScale = 0f;
-        
+    }
+    public void GameStart()
+    {
+        Time.timeScale = 1f;
     }
 
     void ResumeGame()
