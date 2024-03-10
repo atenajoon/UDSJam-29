@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6640926850576739327}
   - component: {fileID: 4834046314182328450}
   - component: {fileID: 6800023531078759544}
-  - component: {fileID: 8510120313881051335}
+  - component: {fileID: 9146461883609249984}
   m_Layer: 0
   m_Name: Fish_1
   m_TagString: Fish_1
@@ -128,8 +128,8 @@ MonoBehaviour:
   - {fileID: 4543762334405108496}
   - {fileID: 4661484643493502843, guid: ca8bdbaf762af4e0586cdab84ddd002b, type: 3}
   - {fileID: 5189212160027560808, guid: 174a0ad93b3114d6385cfa6a4d7f9b30, type: 3}
---- !u!70 &8510120313881051335
-CapsuleCollider2D:
+--- !u!60 &9146461883609249984
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -142,5 +142,38 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 5.953563, y: 4.2499995}
-  m_Direction: 0
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.9535637, y: 4.25}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 2.917684, y: -1.3620803}
+      - {x: 1.9011079, y: -0.6770022}
+      - {x: 1.8916793, y: -0.36539006}
+      - {x: 1.8639925, y: 0.4679206}
+      - {x: 2.2922688, y: 0.7778724}
+      - {x: 2.4032707, y: 1.1309083}
+      - {x: 2.2744846, y: 1.7047033}
+      - {x: 1.5445586, y: 2.1167212}
+      - {x: 0.689788, y: 2.0970213}
+      - {x: 0.49994186, y: 1.9148813}
+      - {x: -0.9967208, y: 1.8528932}
+      - {x: -2.0487835, y: 1.5342665}
+      - {x: -2.5950553, y: 1.5434084}
+      - {x: -2.9251916, y: 1.2012519}
+      - {x: -2.910489, y: 0.6917785}
+      - {x: -1.9871302, y: -0.45333332}
+      - {x: -1.8605666, y: -1.1568794}
+      - {x: -1.186335, y: -1.88974}
+      - {x: -0.7759331, y: -1.8604256}
+      - {x: -0.506054, y: -1.4932553}
+      - {x: 0.8949889, y: -1.7431679}
+      - {x: 1.9503081, y: -2.1317418}
+      - {x: 2.5650523, y: -2.0793374}
+      - {x: 2.9344878, y: -1.8379666}
