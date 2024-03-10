@@ -1,18 +1,31 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Linq;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
-    private Dictionary<string, int> highestEvolutionLevels = new Dictionary<string, int>();
+    public Dictionary<string, bool> scoreBoard = new()
+    {
+        { "Bear", false },
+        { "Fish", false },
+        { "Rabbit", false }
+    };
     private string lastEvolvedSpecies; // Tracks the last species type that evolved to level 3.
 
     private void Awake()
     {
-        if (Instance == null) { Instance = this; }
-        else { Destroy(gameObject); }
-        StopMenu.Instance.GameStart();
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject); // Ensure the GameManager persists across scenes
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
     }
 
     public void UpdateEvolutionLevel(string speciesType, int newLevel)
@@ -25,7 +38,11 @@ public class GameManager : MonoBehaviour
 
         // Rest of the method remains the same...
     }
-
+    // Method to return the count of creatures collected at their final stage
+    public int GetCollectedFinalCount()
+    {
+        return scoreBoard.Count(entry => entry.Value == true);
+    }
     public void TriggerWin(string speciesType)
     {
         // Handle the win condition when a creature reaches level 3.
@@ -33,7 +50,8 @@ public class GameManager : MonoBehaviour
 
         // Store the species that won for display on the main menu.
         lastEvolvedSpecies = speciesType;
-
+        scoreBoard[speciesType] = true;
+        Debug.Log("scroreBOard:" + speciesType + scoreBoard[speciesType]);
         // Call UI method to display the win popup
         StopMenu.Instance.ShowWinPopup(speciesType);
     }
