@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI; // Required for interacting with UI elements like buttons
-using UnityEngine.SceneManagement; // Required for changing scenes
+using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl; // Required for changing scenes
 
 public class MainMenuController : MonoBehaviour
 {
