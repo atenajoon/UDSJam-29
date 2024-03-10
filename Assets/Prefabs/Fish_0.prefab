@@ -99,7 +99,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1.5
+  m_Mass: 2
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -140,7 +140,7 @@ MonoBehaviour:
   speciesLevel: 0
   speciesType: Fish
   maxEvolve: 4
-  outsideBoxDeathTime: 5
+  outsideBoxDeathTime: 0
   evolutionPrefabs:
   - {fileID: 4420812692814503624}
   - {fileID: 4543762334405108496, guid: 314c00c912bc442ec8119d446105f8df, type: 3}

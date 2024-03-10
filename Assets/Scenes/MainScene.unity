@@ -323,7 +323,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 40.51, y: 5.8}
+  m_Size: {x: 62.25, y: 5.8}
   m_EdgeRadius: 0
 --- !u!1 &585856173
 GameObject:
@@ -533,9 +533,8 @@ MonoBehaviour:
   - {fileID: 199731320634957301, guid: f934e3a6d88b741528c996061cc500a7, type: 3}
   - {fileID: 4420812692814503624, guid: 7062fcf3d03bd458186705812e6ae079, type: 3}
   - {fileID: 3642599197480288374, guid: df8ecb7f389224775b41f6cbc75d9189, type: 3}
-  - {fileID: 2288139631011154921, guid: b9d442fdd1dd54a5f8c29a1a3cfd3a5a, type: 3}
   minSpawnDelay: 0
-  maxSpawnDelay: 0.75
+  maxSpawnDelay: 2
 --- !u!4 &829225579
 Transform:
   m_ObjectHideFlags: 0
@@ -567,7 +566,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &873830507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -575,7 +574,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 873830506}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd19a137c22624c2e8cb7096d3c73185, type: 3}
   m_Name: 
@@ -781,6 +780,10 @@ PrefabInstance:
     - target: {fileID: 4814493322945045646, guid: fb747d434f6c5435185b8177ccd10c27, type: 3}
       propertyPath: m_Name
       value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814493322945045646, guid: fb747d434f6c5435185b8177ccd10c27, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4814493322945045646, guid: fb747d434f6c5435185b8177ccd10c27, type: 3}
       propertyPath: m_TagString
