@@ -123,6 +123,8 @@ MonoBehaviour:
   speciesWeight: 3
   speciesLevel: 3
   speciesType: Bear
+  maxEvolve: 4
+  outsideBoxDeathTime: 5
   evolutionPrefabs:
   - {fileID: 199731320634957301, guid: f934e3a6d88b741528c996061cc500a7, type: 3}
   - {fileID: 2396304582041632068, guid: f3c2d5672887b4769a6baeb32cc34ba0, type: 3}

@@ -123,6 +123,8 @@ MonoBehaviour:
   speciesWeight: 2.5
   speciesLevel: 3
   speciesType: Fish
+  maxEvolve: 4
+  outsideBoxDeathTime: 5
   evolutionPrefabs:
   - {fileID: 4420812692814503624, guid: 7062fcf3d03bd458186705812e6ae079, type: 3}
   - {fileID: 4543762334405108496, guid: 314c00c912bc442ec8119d446105f8df, type: 3}
