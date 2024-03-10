@@ -115,10 +115,17 @@ public class StopMenu : MonoBehaviour
         Time.timeScale = 0f;
         StartCoroutine(AnimateStopMenuIn());
     }
+    void GameEnd()
+    {
+        Time.timeScale = 0f;
+        
+    }
 
     void ResumeGame()
     {
         Time.timeScale = 1f;
         StartCoroutine(AnimateStopMenuOut()); // Start the animation coroutine to slide out the menu
     }
+
+
 }
