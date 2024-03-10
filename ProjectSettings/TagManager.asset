@@ -23,6 +23,8 @@ TagManager:
   - Rabbit_1
   - Rabbit_2
   - Rabbit_3
+  - BoxLeft
+  - BoxRight
   layers:
   - Default
   - TransparentFX

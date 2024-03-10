@@ -26,12 +26,20 @@ public class SpeciesPrefab : MonoBehaviour
         {
             Vector3 position = transform.position;
             Quaternion rotation = Quaternion.identity;
-            _ = Instantiate(evolutionPrefabs[speciesLevel + 1], position, rotation);
+            GameObject evolvedCreatureObject = Instantiate(evolutionPrefabs[speciesLevel + 1], position, rotation);
 
             // Destroy the current creature as it has now evolved
             Destroy(gameObject);
             // Make sure to also destroy the other creature that was involved in the evolution
             // You might need to pass it as a parameter or store a reference to it
+
+            // Add an upward force to the evolved creature
+            Rigidbody2D rb = evolvedCreatureObject.GetComponent<Rigidbody2D>();
+            if (rb != null)
+            {
+                Vector2 upwardForce = new Vector2(Random.Range(-5, 5), 10); // Change the '1' to adjust the force magnitude
+                rb.AddForce(upwardForce, ForceMode2D.Impulse);
+            }
             if (speciesLevel == 3)
             {
                 GameManager.Instance.TriggerWin(speciesType);

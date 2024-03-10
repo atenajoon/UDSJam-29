@@ -33,7 +33,7 @@ public class SpawnController : MonoBehaviour
     {
         int randomIndex = Random.Range(0, speciesPrefabs.Length);
         GameObject selectedSpeciesPrefab = speciesPrefabs[randomIndex];
-        
+
         GameObject _newSpecies = Instantiate(selectedSpeciesPrefab, GetRandomPosition(), Quaternion.identity);
 
         // Adjust falling speed based on the weight of the species
@@ -51,13 +51,13 @@ public class SpawnController : MonoBehaviour
             }
         }
 
-        if(!speciesCount.ContainsKey(selectedSpeciesPrefab))
+        if (!speciesCount.ContainsKey(selectedSpeciesPrefab))
         {
             speciesCount[selectedSpeciesPrefab] = 1;
         }
         else
         {
-            speciesCount[selectedSpeciesPrefab]++ ;
+            speciesCount[selectedSpeciesPrefab]++;
         }
         // Debug.Log("Spawning " + selectedSpeciesPrefab.name + ": " + speciesCount[selectedSpeciesPrefab]);      
     }
