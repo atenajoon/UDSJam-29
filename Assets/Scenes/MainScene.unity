@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9c3a618cc74e404787460e507d7b613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 13
+  moveSpeed: 15
 --- !u!50 &295242600
 Rigidbody2D:
   serializedVersion: 4
@@ -178,7 +178,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 6
 --- !u!212 &295242601
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -312,7 +312,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 6.44}
+  m_Offset: {x: 0, y: 5.59}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -667,6 +667,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 295242602}
     m_Modifications:
+    - target: {fileID: 3291923419220627764, guid: 2011caddce88c4d3ea12d6d57720b61e, type: 3}
+      propertyPath: m_Size.x
+      value: 61.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 3291923419220627764, guid: 2011caddce88c4d3ea12d6d57720b61e, type: 3}
+      propertyPath: m_Offset.x
+      value: 264.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7060098644082853777, guid: 2011caddce88c4d3ea12d6d57720b61e, type: 3}
+      propertyPath: m_Size.x
+      value: 64.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7060098644082853777, guid: 2011caddce88c4d3ea12d6d57720b61e, type: 3}
+      propertyPath: m_Offset.x
+      value: -272.4
+      objectReference: {fileID: 0}
     - target: {fileID: 7369089187429926856, guid: 2011caddce88c4d3ea12d6d57720b61e, type: 3}
       propertyPath: m_TagString
       value: Box
@@ -674,6 +690,10 @@ PrefabInstance:
     - target: {fileID: 7369089188117100532, guid: 2011caddce88c4d3ea12d6d57720b61e, type: 3}
       propertyPath: m_TagString
       value: Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 7369089188213315040, guid: 2011caddce88c4d3ea12d6d57720b61e, type: 3}
+      propertyPath: m_Offset.y
+      value: -199.2
       objectReference: {fileID: 0}
     - target: {fileID: 7369089188213315052, guid: 2011caddce88c4d3ea12d6d57720b61e, type: 3}
       propertyPath: m_TagString
