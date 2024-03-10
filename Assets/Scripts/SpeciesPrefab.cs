@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class SpeciesPrefab : MonoBehaviour
@@ -6,6 +7,7 @@ public class SpeciesPrefab : MonoBehaviour
     public int speciesLevel; // The level should be set on the prefab, 0 for _0, 1 for _1, etc.
     public string speciesType; // The type should be set on the prefab, "Bear", "Fish", "Rabbit", "Null"
 
+    public float outsideBoxDeathTime = 5f;
     public GameObject[] evolutionPrefabs; // Assign prefabs for each evolution level in the inspector, in order
 
     private void Start()
@@ -39,6 +41,14 @@ public class SpeciesPrefab : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            // Once on the ground, the creature should no longer be eligible for evolution
+            // Start the coroutine to destroy the creature after 5 seconds
+            StartCoroutine(DestroyAfterDelay(outsideBoxDeathTime));
+        }
+
+        // Logic for handling collision with the box
         SpeciesPrefab other = collision.gameObject.GetComponent<SpeciesPrefab>();
 
         // Ensure only one object handles the evolution process to avoid duplicate evolution
@@ -51,6 +61,14 @@ public class SpeciesPrefab : MonoBehaviour
             }
         }
         // Additional collision handling...
+
+
+    }
+
+    private IEnumerator DestroyAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Destroy(gameObject);
     }
 }
 
