@@ -124,7 +124,7 @@ MonoBehaviour:
   speciesLevel: 1
   speciesType: Rabbit
   maxEvolve: 4
-  outsideBoxDeathTime: 5
+  outsideBoxDeathTime: 0
   evolutionPrefabs:
   - {fileID: 3642599197480288374, guid: df8ecb7f389224775b41f6cbc75d9189, type: 3}
   - {fileID: 1142877862740067495}
