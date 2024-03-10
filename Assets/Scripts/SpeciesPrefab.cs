@@ -10,6 +10,7 @@ public class SpeciesPrefab : MonoBehaviour
     public float outsideBoxDeathTime = 5f;
     public GameObject[] evolutionPrefabs; // Assign prefabs for each evolution level in the inspector, in order
 
+    private bool canEvolve = true; // Flag to indicate if the object is eligible for evolution
     private void Start()
     {
         if (speciesType == "Null")
@@ -44,24 +45,29 @@ public class SpeciesPrefab : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             // Once on the ground, the creature should no longer be eligible for evolution
+            canEvolve = false;
+
             // Start the coroutine to destroy the creature after 5 seconds
             StartCoroutine(DestroyAfterDelay(outsideBoxDeathTime));
         }
 
-        // Logic for handling collision with the box
-        SpeciesPrefab other = collision.gameObject.GetComponent<SpeciesPrefab>();
-
-        // Ensure only one object handles the evolution process to avoid duplicate evolution
-        if (other != null && other.speciesType == speciesType && other.speciesLevel == speciesLevel)
+        if(canEvolve) 
         {
-            if (gameObject.GetInstanceID() < collision.gameObject.GetInstanceID())
-            {
-                Evolve();
-                other.gameObject.SetActive(false); // Temporarily disable the other object to avoid multiple collisions
-            }
-        }
-        // Additional collision handling...
+            // Logic for handling collision with the box
+            SpeciesPrefab other = collision.gameObject.GetComponent<SpeciesPrefab>();
 
+            // Ensure only one object handles the evolution process to avoid duplicate evolution
+            if (other != null && other.speciesType == speciesType && other.speciesLevel == speciesLevel)
+            {
+                if (gameObject.GetInstanceID() < collision.gameObject.GetInstanceID())
+                {
+                    Evolve();
+                    other.gameObject.SetActive(false); // Temporarily disable the other object to avoid multiple collisions
+                }
+            }
+            // Additional collision handling...
+
+        }
 
     }
 
